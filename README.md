@@ -75,7 +75,7 @@ Historically fragmented across dozens of siloed point solutions (isolated CSPM s
 
 *Self-hosted, transparent, and auditable open-source cloud security frameworks. Ranked in descending order of GitHub stargazers.*
 
-| Project | Stars | Focus Category | Description |
+| Project | GitHub_Stars | Focus Category | Description |
 |:---|:---:|:---|:---|
 | **[Trivy](https://github.com/aquasecurity/trivy)** | [![Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) | Vulnerability & IaC Scanning | **The gold standard for container, filesystem, Git repo, and cloud security scanning.** Detects CVEs, misconfigurations (Terraform, Dockerfile, K8s), exposed secrets, and SBOM licenses under Apache 2.0. |
 | **[Prowler](https://github.com/prowler-cloud/prowler)** | [![Stars](https://img.shields.io/github/stars/prowler-cloud/prowler?style=social&color=white)](https://github.com/prowler-cloud/prowler/stargazers) | Multi-Cloud CSPM & Compliance | **The leading open-source multi-cloud security posture scanner.** Features 500+ checks across AWS, Azure, GCP, Kubernetes, and Microsoft 365 mapped directly to CIS, NIST, ISO 27001, HIPAA, and PCI-DSS. |
