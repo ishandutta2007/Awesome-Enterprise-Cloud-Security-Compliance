@@ -1,6 +1,6 @@
 # Awesome-Enterprise-Cloud-Security-Compliance
 
-# Top Enterprise Cloud Security & Compliance Ecosystem
+## Top Enterprise Cloud Security & Compliance Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on CSPM, CNAPP, Runtime Protection & Self-Hosted Security Scanners*  
