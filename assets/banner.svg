@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0a0d18; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d18" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ef7d" />
+      <stop offset="100%" stop-color="#11998e" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2238" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glowing filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" rx="12" />
+
+  <!-- Animated Grid / Scanline pattern in background -->
+  <g opacity="0.12">
+    <line x1="0" y1="60" x2="1200" y2="60" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="0" y1="120" x2="1200" y2="120" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="0" y1="180" x2="1200" y2="180" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="200" y1="0" x2="200" y2="360" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="400" y1="0" x2="400" y2="360" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="600" y1="0" x2="600" y2="360" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="800" y1="0" x2="800" y2="360" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+    <line x1="1000" y1="0" x2="1000" y2="360" stroke="#4facfe" stroke-width="1" stroke-dasharray="6 6" />
+  </g>
+
+  <!-- Dynamic Animated Ambient Orbs (Background depth layer) -->
+  <circle cx="150" cy="80" r="130" fill="#00f2fe" opacity="0.08">
+    <animate attributeName="r" values="120;140;120" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.06;0.12;0.06" dur="6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1060" cy="190" r="160" fill="#38ef7d" opacity="0.08">
+    <animate attributeName="r" values="140;170;140" dur="8s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.05;0.11;0.05" dur="8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="650" cy="300" r="100" fill="#7928ca" opacity="0.07">
+    <animate attributeName="r" values="90;120;90" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Dynamic Security Radar Graphic in Top Right (Background element) -->
+  <g transform="translate(1020, 110)" opacity="0.45">
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#00f2fe" stroke-width="1.2" opacity="0.3" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#00f2fe" stroke-width="1.2" opacity="0.5" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#00f2fe" stroke-width="1.2" opacity="0.7" />
+    <line x1="-85" y1="0" x2="85" y2="0" stroke="#00f2fe" stroke-width="1" opacity="0.4" />
+    <line x1="0" y1="-85" x2="0" y2="85" stroke="#00f2fe" stroke-width="1" opacity="0.4" />
+    <line x1="0" y1="0" x2="60" y2="-45" stroke="#38ef7d" stroke-width="2.5" filter="url(#glowGreen)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />
+    </line>
+    <!-- Blinking Threat Target Nodes -->
+    <circle cx="35" cy="-28" r="3.5" fill="#ff4d4d">
+      <animate attributeName="opacity" values="1;0.1;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-25" cy="35" r="3" fill="#38ef7d">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="45" cy="40" r="3" fill="#ffaa00">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Foreground Content Container: Title, Subtitle, Badges (Crisp and perfectly visible) -->
+
+  <!-- Top Category Tag -->
+  <g transform="translate(70, 48)">
+    <rect width="250" height="26" rx="13" fill="#132338" stroke="#00f2fe" stroke-width="1" />
+    <circle cx="14" cy="13" r="5" fill="#38ef7d" filter="url(#glowGreen)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="28" y="17" fill="#00f2fe" font-size="11.5" font-weight="700" letter-spacing="1.2">ENTERPRISE CLOUD DEFENSE</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="70" y="118" fill="#ffffff" font-size="34" font-weight="800" letter-spacing="-0.5">
+    Awesome Enterprise Cloud Security &amp; Compliance
+  </text>
+
+  <!-- Subtitle -->
+  <text x="70" y="156" fill="#94a3b8" font-size="16.5" font-weight="400">
+    Curated Hub for CSPM • CNAPP • Runtime Protection • Self-Hosted Auditing
+  </text>
+
+  <!-- Multi-Cloud Compliance & Coverage Indicators -->
+  <g transform="translate(70, 182)">
+    <text x="0" y="0" fill="#38ef7d" font-size="13" font-weight="600" letter-spacing="0.5">
+      ✓ AWS • Azure • GCP • Kubernetes • Multi-Cloud &amp; Hybrid Environments
+    </text>
+  </g>
+
+  <!-- Animated Feature Badges / Interactive Metrics Pills -->
+  <g transform="translate(70, 218)">
+    <!-- Pill 1: CSPM & CNAPP -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="42" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="42" rx="2" fill="#00f2fe" />
+      <text x="18" y="20" fill="#e2e8f0" font-size="12" font-weight="700">Posture &amp; CNAPP</text>
+      <text x="18" y="34" fill="#64748b" font-size="10.5">Wiz • Orca • Defender</text>
+    </g>
+
+    <!-- Pill 2: Open Source Auditing -->
+    <g transform="translate(196, 0)">
+      <rect width="190" height="42" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="42" rx="2" fill="#38ef7d" />
+      <text x="18" y="20" fill="#e2e8f0" font-size="12" font-weight="700">Open-Source Scanners</text>
+      <text x="18" y="34" fill="#64748b" font-size="10.5">Trivy • Prowler • Checkov</text>
+    </g>
+
+    <!-- Pill 3: Runtime Security -->
+    <g transform="translate(402, 0)">
+      <rect width="195" height="42" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="42" rx="2" fill="#f59e0b" />
+      <text x="18" y="20" fill="#e2e8f0" font-size="12" font-weight="700">eBPF Runtime Detection</text>
+      <text x="18" y="34" fill="#64748b" font-size="10.5">Falco • Tracee • K8s</text>
+    </g>
+
+    <!-- Pill 4: Compliance Frameworks -->
+    <g transform="translate(613, 0)">
+      <rect width="205" height="42" rx="8" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="42" rx="2" fill="#ec4899" />
+      <text x="18" y="20" fill="#e2e8f0" font-size="12" font-weight="700">Compliance Mappings</text>
+      <text x="18" y="34" fill="#64748b" font-size="10.5">CIS • NIST • SOC 2 • HIPAA</text>
+    </g>
+  </g>
+
+  <!-- Live Pulse Indicator in Footer -->
+  <g transform="translate(70, 310)">
+    <circle cx="6" cy="6" r="4.5" fill="#38ef7d">
+      <animate attributeName="r" values="3.5;6;3.5" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="20" y="10" fill="#94a3b8" font-size="12" font-weight="500">
+      Enterprise SaaS TCO Analysis • Battle-Tested Open Source Repositories • 100% Free &amp; Community-Driven
+    </text>
+  </g>
+</svg>
